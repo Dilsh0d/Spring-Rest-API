@@ -1,7 +1,6 @@
 package com.backend.tasks.entity;
 
 import com.backend.tasks.dto.OrganizationDto;
-import org.apache.catalina.User;
 
 import javax.persistence.*;
 import java.util.ArrayList;
