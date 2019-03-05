@@ -1,5 +1,7 @@
 package com.backend.tasks.entity;
 
+import com.backend.tasks.dto.UserDto;
+
 import javax.persistence.*;
 
 /**
@@ -37,5 +39,13 @@ public class UserEntity extends BaseEntity {
 
     public OrganizationEntity getOrganization() {
         return organization;
+    }
+
+    public UserDto getDto() {
+        UserDto dto = new UserDto();
+        dto.setId(getId());
+        dto.setOrgId(getOrgId());
+        dto.setFullname(getFullname());
+        return dto;
     }
 }
