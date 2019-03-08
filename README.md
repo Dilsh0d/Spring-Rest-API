@@ -13,7 +13,7 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
   com.backend.tasks.Application.java
 ```
 ### Rest API Controllers
-**OrganizationController**<br/>
+1. **OrganizationController**<br/>
 1. Create organization with ***post*** method:
 ```java
 curl --header "Content-Type: application/json" \
@@ -57,7 +57,7 @@ curl --request DELETE \
 ```
 ###### Response with status code **204**:
 
-**UserController**<br/>
+2. **UserController**<br/>
 1. Create organization user with ***post*** method:
 ```java
 curl --header "Content-Type: application/json" \
