@@ -107,3 +107,4 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
 public class NotFound404Exception extends RuntimeException {
 }
 ```
+If not found from database organization or users then give runtime error _NotFound404Exception_ and return to client **404** error
