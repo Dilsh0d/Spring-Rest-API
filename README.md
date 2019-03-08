@@ -58,7 +58,7 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
     ##### Response with status code **204**:
 
 2. **UserController**<br/>
-    Create one organization after it run this is http urls:
+    _Create one organization after it run this is http urls:_
     1. Create organization user with ***post*** method:
     ```java
     curl --header "Content-Type: application/json" \
@@ -101,3 +101,9 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
       http://localhost:8080/orgs/1/users/1
     ```
     ##### Response with status code **204**:
+### 404 Not found response status
+```java
+@ResponseStatus(value = HttpStatus.NOT_FOUND, reason="Object not found")
+public class NotFound404Exception extends RuntimeException {
+}
+```
