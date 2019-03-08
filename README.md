@@ -21,6 +21,8 @@ curl --header "Content-Type: application/json" \
   --data '{"name":"Coca Cola"}' \
   http://localhost:8080/orgs
 ```
+Response with status code **201**: _{"id":1,"name":"Coca Cola"}_
+
 Update organization with ***put*** method:
 ```java
 curl --header "Content-Type: application/json" \
