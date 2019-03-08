@@ -56,3 +56,47 @@ curl --request DELETE \
   http://localhost:8080/orgs/1
 ```
 ###### Response with status code **204**:
+
+**UserController**<br/>
+1. Create organization user with ***post*** method:
+```java
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"fullname":"Jack Douglas"}' \
+  http://localhost:8080/orgs/1/users
+```
+###### Response with status code **201**: _{"id":1,"fullname":"Jack Douglas","orgId":1}_
+<hr/>
+
+2. Update organization user with ***put*** method:
+```java
+curl --header "Content-Type: application/json" \
+  --request PUT \
+  --data '{"fullname":"Jack Black"}' \
+  http://localhost:8080/orgs/1/users/1
+```
+###### Response with status code **200**: _{"id":1,"fullname":"Jack Black","orgId":1}_
+<hr/>
+
+3. Get one organization user with ***get*** method:
+```java
+curl --request GET \
+  http://localhost:8080/orgs/1/users/1
+```
+###### Response with status code **200**: _{"id":1,"fullname":"Jack Black","orgId":1}_
+<hr/>
+
+4. Get all organization users list with ***get*** method:
+```java
+curl --request GET \
+  http://localhost:8080/orgs/1/users
+```
+###### Response with status code **200**: _[{"id":1,"fullname":"Jack Black","orgId":1}]_
+<hr/>
+
+5. Delete one organization user with ***delete*** method:
+```java
+curl --request DELETE \
+  http://localhost:8080/orgs/1/users/1
+```
+###### Response with status code **204**:
