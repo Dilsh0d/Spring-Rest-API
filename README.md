@@ -14,6 +14,43 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
 ```
 ### Rest API Controllers
 1. **OrganizationController**<br/>
+    ```java
+    @RestController
+    @RequestMapping("/orgs")
+    public class OrganizationController {
+
+        @Autowired
+        private OrganizationService organizationService;
+
+        @PostMapping
+        @ResponseStatus(value = HttpStatus.CREATED)
+        public @ResponseBody OrganizationDto createOrg(@RequestBody OrganizationDto orgDto) {
+            return organizationService.save(orgDto);
+        }
+
+        @PutMapping(path = "/{orgId}")
+        public @ResponseBody OrganizationDto updateOrg(@PathVariable(name = "orgId") Long orgId,@RequestBody OrganizationDto orgDto) {
+            orgDto.setId(orgId);
+            return organizationService.update(orgDto);
+        }
+
+        @GetMapping(path = "/{orgId}")
+        public @ResponseBody OrganizationDto getOrg(@PathVariable(name = "orgId") Long orgId) {
+            return organizationService.get(orgId);
+        }
+
+        @DeleteMapping(path = "/{orgId}")
+        @ResponseStatus(value = HttpStatus.NO_CONTENT)
+        public void deleteOrg(@PathVariable(name = "orgId") Long orgId) {
+            organizationService.delete(orgId);
+        }
+
+        @GetMapping
+        public @ResponseBody  List<OrganizationDto> listOrg() {
+            return organizationService.list();
+        }
+    }
+    ```
     1. Create organization with ***post*** method:
     ```java
     curl --header "Content-Type: application/json" \
@@ -58,7 +95,7 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
     ##### Response with status code **204**:
 
 2. **UserController**<br/>
-    _Create one organization after it run this is http urls:_
+    _At least Create one organization before run this is http urls:_
     1. Create organization user with ***post*** method:
     ```java
     curl --header "Content-Type: application/json" \
