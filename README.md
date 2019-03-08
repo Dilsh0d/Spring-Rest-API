@@ -14,89 +14,89 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
 ```
 ### Rest API Controllers
 1. **OrganizationController**<br/>
-1. Create organization with ***post*** method:
-```java
-curl --header "Content-Type: application/json" \
-  --request POST \
-  --data '{"name":"Coca Cola"}' \
-  http://localhost:8080/orgs
-```
-###### Response with status code **201**: _{"id":1,"name":"Coca Cola"}_
-<hr/>
+    1. Create organization with ***post*** method:
+    ```java
+    curl --header "Content-Type: application/json" \
+      --request POST \
+      --data '{"name":"Coca Cola"}' \
+      http://localhost:8080/orgs
+    ```
+    ###### Response with status code **201**: _{"id":1,"name":"Coca Cola"}_
+    <hr/>
 
-2. Update organization with ***put*** method:
-```java
-curl --header "Content-Type: application/json" \
-  --request PUT \
-  --data '{"name":"Coca Cola UZB"}' \
-  http://localhost:8080/orgs/1
-```
-###### Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
-<hr/>
+    2. Update organization with ***put*** method:
+    ```java
+    curl --header "Content-Type: application/json" \
+      --request PUT \
+      --data '{"name":"Coca Cola UZB"}' \
+      http://localhost:8080/orgs/1
+    ```
+    ###### Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
+    <hr/>
 
-3. Get one organization with ***get*** method:
-```java
-curl --request GET \
-  http://localhost:8080/orgs/1
-```
-###### Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
-<hr/>
+    3. Get one organization with ***get*** method:
+    ```java
+    curl --request GET \
+      http://localhost:8080/orgs/1
+    ```
+    ###### Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
+    <hr/>
 
-4. Get all organizations list with ***get*** method:
-```java
-curl --request GET \
-  http://localhost:8080/orgs
-```
-###### Response with status code **200**: _[{"id":1,"name":"Coca Cola UZB"}]_
-<hr/>
+    4. Get all organizations list with ***get*** method:
+    ```java
+    curl --request GET \
+      http://localhost:8080/orgs
+    ```
+    ###### Response with status code **200**: _[{"id":1,"name":"Coca Cola UZB"}]_
+    <hr/>
 
-5. Delete one organization with ***delete*** method:
-```java
-curl --request DELETE \
-  http://localhost:8080/orgs/1
-```
-###### Response with status code **204**:
+    5. Delete one organization with ***delete*** method:
+    ```java
+    curl --request DELETE \
+      http://localhost:8080/orgs/1
+    ```
+    ###### Response with status code **204**:
 
 2. **UserController**<br/>
-1. Create organization user with ***post*** method:
-```java
-curl --header "Content-Type: application/json" \
-  --request POST \
-  --data '{"fullname":"Jack Douglas"}' \
-  http://localhost:8080/orgs/1/users
-```
-###### Response with status code **201**: _{"id":1,"fullname":"Jack Douglas","orgId":1}_
-<hr/>
+    1. Create organization user with ***post*** method:
+    ```java
+    curl --header "Content-Type: application/json" \
+      --request POST \
+      --data '{"fullname":"Jack Douglas"}' \
+      http://localhost:8080/orgs/1/users
+    ```
+    ###### Response with status code **201**: _{"id":1,"fullname":"Jack Douglas","orgId":1}_
+    <hr/>
 
-2. Update organization user with ***put*** method:
-```java
-curl --header "Content-Type: application/json" \
-  --request PUT \
-  --data '{"fullname":"Jack Black"}' \
-  http://localhost:8080/orgs/1/users/1
-```
-###### Response with status code **200**: _{"id":1,"fullname":"Jack Black","orgId":1}_
-<hr/>
+    2. Update organization user with ***put*** method:
+    ```java
+    curl --header "Content-Type: application/json" \
+      --request PUT \
+      --data '{"fullname":"Jack Black"}' \
+      http://localhost:8080/orgs/1/users/1
+    ```
+    ###### Response with status code **200**: _{"id":1,"fullname":"Jack Black","orgId":1}_
+    <hr/>
 
-3. Get one organization user with ***get*** method:
-```java
-curl --request GET \
-  http://localhost:8080/orgs/1/users/1
-```
-###### Response with status code **200**: _{"id":1,"fullname":"Jack Black","orgId":1}_
-<hr/>
+    3. Get one organization user with ***get*** method:
+    ```java
+    curl --request GET \
+      http://localhost:8080/orgs/1/users/1
+    ```
+    ###### Response with status code **200**: _{"id":1,"fullname":"Jack Black","orgId":1}_
+    <hr/>
 
-4. Get all organization users list with ***get*** method:
-```java
-curl --request GET \
-  http://localhost:8080/orgs/1/users
-```
-###### Response with status code **200**: _[{"id":1,"fullname":"Jack Black","orgId":1}]_
-<hr/>
+    4. Get all organization users list with ***get*** method:
+    ```java
+    curl --request GET \
+      http://localhost:8080/orgs/1/users
+    ```
+    ###### Response with status code **200**: _[{"id":1,"fullname":"Jack Black","orgId":1}]_
+    <hr/>
 
-5. Delete one organization user with ***delete*** method:
-```java
-curl --request DELETE \
-  http://localhost:8080/orgs/1/users/1
-```
-###### Response with status code **204**:
+    5. Delete one organization user with ***delete*** method:
+    ```java
+    curl --request DELETE \
+      http://localhost:8080/orgs/1/users/1
+    ```
+    ###### Response with status code **204**:
