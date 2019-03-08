@@ -21,7 +21,7 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
       --data '{"name":"Coca Cola"}' \
       http://localhost:8080/orgs
     ```
-    ###### Response with status code **201**: _{"id":1,"name":"Coca Cola"}_
+    ##### Response with status code **201**: _{"id":1,"name":"Coca Cola"}_
     <hr/>
 
     2. Update organization with ***put*** method:
@@ -31,7 +31,7 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
       --data '{"name":"Coca Cola UZB"}' \
       http://localhost:8080/orgs/1
     ```
-    ###### Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
+    ##### Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
     <hr/>
 
     3. Get one organization with ***get*** method:
@@ -39,7 +39,7 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
     curl --request GET \
       http://localhost:8080/orgs/1
     ```
-    ###### Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
+    ##### Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
     <hr/>
 
     4. Get all organizations list with ***get*** method:
@@ -47,7 +47,7 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
     curl --request GET \
       http://localhost:8080/orgs
     ```
-    ###### Response with status code **200**: _[{"id":1,"name":"Coca Cola UZB"}]_
+    ##### Response with status code **200**: _[{"id":1,"name":"Coca Cola UZB"}]_
     <hr/>
 
     5. Delete one organization with ***delete*** method:
@@ -55,9 +55,10 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
     curl --request DELETE \
       http://localhost:8080/orgs/1
     ```
-    ###### Response with status code **204**:
+    ##### Response with status code **204**:
 
 2. **UserController**<br/>
+    Create one organization after it run this is http urls:
     1. Create organization user with ***post*** method:
     ```java
     curl --header "Content-Type: application/json" \
@@ -65,7 +66,7 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
       --data '{"fullname":"Jack Douglas"}' \
       http://localhost:8080/orgs/1/users
     ```
-    ###### Response with status code **201**: _{"id":1,"fullname":"Jack Douglas","orgId":1}_
+    ##### Response with status code **201**: _{"id":1,"fullname":"Jack Douglas","orgId":1}_
     <hr/>
 
     2. Update organization user with ***put*** method:
@@ -75,7 +76,7 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
       --data '{"fullname":"Jack Black"}' \
       http://localhost:8080/orgs/1/users/1
     ```
-    ###### Response with status code **200**: _{"id":1,"fullname":"Jack Black","orgId":1}_
+    ##### Response with status code **200**: _{"id":1,"fullname":"Jack Black","orgId":1}_
     <hr/>
 
     3. Get one organization user with ***get*** method:
@@ -83,7 +84,7 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
     curl --request GET \
       http://localhost:8080/orgs/1/users/1
     ```
-    ###### Response with status code **200**: _{"id":1,"fullname":"Jack Black","orgId":1}_
+    ##### Response with status code **200**: _{"id":1,"fullname":"Jack Black","orgId":1}_
     <hr/>
 
     4. Get all organization users list with ***get*** method:
@@ -91,7 +92,7 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
     curl --request GET \
       http://localhost:8080/orgs/1/users
     ```
-    ###### Response with status code **200**: _[{"id":1,"fullname":"Jack Black","orgId":1}]_
+    ##### Response with status code **200**: _[{"id":1,"fullname":"Jack Black","orgId":1}]_
     <hr/>
 
     5. Delete one organization user with ***delete*** method:
@@ -99,4 +100,4 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
     curl --request DELETE \
       http://localhost:8080/orgs/1/users/1
     ```
-    ###### Response with status code **204**:
+    ##### Response with status code **204**:
