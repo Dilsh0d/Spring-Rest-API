@@ -21,7 +21,7 @@ curl --header "Content-Type: application/json" \
   --data '{"name":"Coca Cola"}' \
   http://localhost:8080/orgs
 ```
-Response with status code **201**: _{"id":1,"name":"Coca Cola"}_
+###### Response with status code **201**: _{"id":1,"name":"Coca Cola"}_
 <hr/>
 
 2. Update organization with ***put*** method:
@@ -31,7 +31,7 @@ curl --header "Content-Type: application/json" \
   --data '{"name":"Coca Cola UZB"}' \
   http://localhost:8080/orgs/1
 ```
-Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
+###### Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
 <hr/>
 
 3. Get one organization with ***get*** method:
@@ -39,7 +39,7 @@ Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
 curl --request GET \
   http://localhost:8080/orgs/1
 ```
-Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
+###### Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
 <hr/>
 
 4. Get all organizations list with ***get*** method:
@@ -47,7 +47,7 @@ Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
 curl --request GET \
   http://localhost:8080/orgs
 ```
-Response with status code **200**: _[{"id":1,"name":"Coca Cola UZB"}]_
+###### Response with status code **200**: _[{"id":1,"name":"Coca Cola UZB"}]_
 <hr/>
 
 5. Delete one organization with ***delete*** method:
@@ -55,4 +55,4 @@ Response with status code **200**: _[{"id":1,"name":"Coca Cola UZB"}]_
 curl --request DELETE \
   http://localhost:8080/orgs/1
 ```
-Response with status code **204**:
+###### Response with status code **204**:
