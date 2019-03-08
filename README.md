@@ -14,7 +14,7 @@ Show examples how can create Rest API endpoints in Spring.In the code shows two 
 ```
 ### Rest API Controllers
 **OrganizationController**<br/>
-Create organization with ***post*** method:
+1. Create organization with ***post*** method:
 ```java
 curl --header "Content-Type: application/json" \
   --request POST \
@@ -23,26 +23,32 @@ curl --header "Content-Type: application/json" \
 ```
 Response with status code **201**: _{"id":1,"name":"Coca Cola"}_
 
-Update organization with ***put*** method:
+2. Update organization with ***put*** method:
 ```java
 curl --header "Content-Type: application/json" \
   --request PUT \
   --data '{"name":"Coca Cola UZB"}' \
   http://localhost:8080/orgs/1
 ```
-Get one organization with ***get*** method:
+Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
+
+3. Get one organization with ***get*** method:
 ```java
 curl --request GET \
   http://localhost:8080/orgs/1
 ```
-Get all organizations list with ***get*** method:
+Response with status code **200**: _{"id":1,"name":"Coca Cola UZB"}_
+
+4. Get all organizations list with ***get*** method:
 ```java
 curl --request GET \
   http://localhost:8080/orgs
 ```
-Delete one organization with ***delete*** method:
+Response with status code **200**: _[{"id":1,"name":"Coca Cola UZB"}]_
+
+5. Delete one organization with ***delete*** method:
 ```java
 curl --request DELETE \
   http://localhost:8080/orgs/1
 ```
-
+Response with status code **204**:
